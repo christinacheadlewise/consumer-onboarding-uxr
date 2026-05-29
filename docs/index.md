@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+**[Download the Claude skill to ask questions about this data](https://raw.githubusercontent.com/christinacheadlewise/consumer-onboarding-uxr/main/.claude/skills/dropoff-survey-insights.md)** — place in your project's `.claude/skills/` folder.
+
+---
+
 # Why Don't New Customers Complete Their First Transaction?
 
 **Consumer Onboarding Drop-off Survey 2025**
