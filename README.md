@@ -2,6 +2,8 @@
 
 Research findings from the Consumer Onboarding team. This repo is designed so anyone on the team can ask Claude questions about our research without needing direct data access.
 
+**[Download the skill file](https://raw.githubusercontent.com/christinacheadlewise/consumer-onboarding-uxr/main/.claude/skills/dropoff-survey-insights.md)** — place it in your project's `.claude/skills/` folder to use with Claude Code.
+
 ## How to use
 
 1. Open this project in Claude Code (or open the folder in VS Code with the Claude Code extension)
