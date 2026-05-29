@@ -1,51 +1,47 @@
 # Consumer Onboarding UXR
 
-Research findings from the Consumer Onboarding team. This repo is designed so anyone on the team can ask Claude questions about our research without needing direct data access.
+**Christina Cheadle** · Staff Design Researcher · Consumer Onboarding
 
-**[Download the skill file](https://raw.githubusercontent.com/christinacheadlewise/consumer-onboarding-uxr/main/.claude/skills/dropoff-survey-insights.md)** — place it in your project's `.claude/skills/` folder to use with Claude Code.
+This is the research repository for the Consumer Onboarding team at Wise. It contains findings from completed studies, along with Claude skills that let anyone on the team query those findings without accessing raw data.
 
-## How to use
+## How to use this repo
 
-1. Open this project in Claude Code (or open the folder in VS Code with the Claude Code extension)
-2. Ask your question in plain language — e.g. "What were the main reasons people didn't convert?" or "How does signup difficulty relate to LTV?"
-3. Claude will answer from the pre-computed findings
+### Reading findings
 
-## What you can ask
+Browse the [live site](https://christinacheadlewise.github.io/consumer-onboarding-uxr/) or read the markdown in `docs/`.
 
-- What surveys found (distributions, themes, comparisons)
-- How friction points relate to lifetime revenue
-- What behavioural data shows about adoption
-- Methodology, sample size, limitations
-- Whether a specific finding is statistically significant
+### Asking questions with Claude
 
-## What Claude won't do
+1. Clone this repo (or open it in VS Code with Claude Code)
+2. Ask questions in plain language — Claude answers from pre-computed findings only
+3. It won't access raw data, run queries, or do new analysis
+4. If it can't answer, it'll give you a message to paste in Slack so I can pick it up
 
-- Show raw data or individual responses
-- Run new statistical analysis or queries
-- Access Snowflake, CSV files, or any data source
-- Create new charts or custom cuts
+The skill files live in `.claude/skills/`. You can also [download them individually](https://raw.githubusercontent.com/christinacheadlewise/consumer-onboarding-uxr/main/.claude/skills/dropoff-survey-insights.md) and drop into any project's `.claude/skills/` folder.
 
-If your question isn't covered by the existing findings, Claude will give you a formatted message to paste into the relevant Slack thread. The research team will pick it up from there.
+### Why no raw data?
 
-## Why it works this way
-
-Surveys contain responses from real customers with user_ids attached. Restricting raw data access ensures we handle it responsibly while still making the insights broadly available to eng, product, and design.
+Surveys contain responses from real customers with user_ids. Restricting access ensures we handle it responsibly while making insights available to eng, product, and design.
 
 ---
 
 ## Studies
 
-### [Consumer Drop-off Survey 2025](docs/index.md)
-
-- **Question:** Why don't new consumers convert within 30 days?
-- **Data collected:** 22 Oct – 25 Nov 2025
-- **Sample:** 1,331 cleaned responses (US, UK, Philippines)
-- **Enrichment:** Matched to Snowflake LTV + onboarding flow data
-- **Live site:** [christinacheadlewise.github.io/consumer-dropoff-survey-2025](https://christinacheadlewise.github.io/consumer-dropoff-survey-2025/)
-- **Skill:** `.claude/skills/dropoff-survey-insights.md`
+| Study | Collected | Sample | Folder |
+|---|---|---|---|
+| [Consumer Drop-off Survey 2025](Consumer%20Onboarding%20Survey%202025/) | Oct–Nov 2025 | 1,331 (US, UK, PH) | `Consumer Onboarding Survey 2025/` |
 
 ---
 
-## Team
+## Repo structure
 
-**Consumer Onboarding** · Staff Researcher: Christina Cheadle
+```
+├── README.md                          ← you are here
+├── docs/                              ← GitHub Pages site (findings)
+├── .claude/skills/                    ← Claude skill files (active)
+└── Consumer Onboarding Survey 2025/   ← study folder
+    ├── README.md                      ← study overview + top findings
+    └── dropoff-survey-insights.md     ← skill source
+```
+
+As new studies are completed, they'll be added as new folders with their own skill files.
